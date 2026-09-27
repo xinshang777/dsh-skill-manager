@@ -1,0 +1,38 @@
+{
+  "name": "dsh-skill-manager",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DSH Web 设置里的「技能管理」页：用本地路径登记技能、开关启用状态，启用的技能会出现在 / 菜单并注入模型上下文",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "skill"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./assets/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "license": "MIT"
+}
