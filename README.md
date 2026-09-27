@@ -17,7 +17,7 @@ DSH Web 设置里的「技能管理」页：用本地路径登记技能、开关
 ```bash
 dsh plugin --profile web add link:.
 # 或
-dsh plugin --profile web add github:<你的用户名>/dsh-skill-manager
+dsh plugin --profile web add github:xinshang777/dsh-skill-manager
 ```
 
 安装后重启 `dsh web`，在设置里进入「技能管理」。
